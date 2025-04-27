@@ -1,0 +1,153 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+  }
+  
+  /* Dark mode */
+  body.dark {
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  }
+  
+  /* Container */
+  .container {
+    background: #fff;
+    width: 500px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+  }
+  
+  /* Dark mode container */
+  body.dark .container {
+    background: #333;
+    color: #f1f1f1;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .header h1 {
+    font-size: 28px;
+  }
+  
+  #dark-mode-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Input Section */
+  .input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .input-section input {
+    flex: 1;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .input-section button {
+    padding: 15px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .input-section button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Task List */
+  #task-list {
+    list-style: none;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  #task-list li {
+    background: #f9f9f9;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+    animation: fadeIn 0.4s ease;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  #task-list li.completed {
+    text-decoration: line-through;
+    color: #999;
+    background: #d3d3d3;
+  }
+  
+  /* Delete button */
+  .delete-btn {
+    background: #ff4d4d;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+  }
+  
+  .delete-btn:hover {
+    background: #e60000;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #clear-all-btn {
+    background: #ff6666;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  #clear-all-btn:hover {
+    background: #cc0000;
+  }
+  
